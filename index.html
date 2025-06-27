@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chen Eye Opticians</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      background-color: #0b0a23;
+    }
+
+    .container {
+      position: relative;
+      width: 100vw;
+    }
+
+    .main-img {
+      width: 100vw;
+      height: auto;
+      display: block;
+    }
+
+    .click-zone {
+      position: absolute;
+      top: 1070px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 210px;
+      height: 42px;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    #lewis-spot {
+      position: absolute;
+      top: 1405px;
+    }
+
+    .clickable {
+      position: absolute;
+      z-index: 3;
+    }
+
+    .call-landline-top {
+      top: 78px;
+      left: 470px;
+      width: 170px;
+      height: 25px;
+    }
+
+    .call-mobile-top {
+      top: 103px;
+      left: 470px;
+      width: 170px;
+      height: 25px;
+    }
+
+    .location-link-top {
+      top: 70px;
+      left: 680px;
+      width: 230px;
+      height: 60px;
+    }
+
+    .call-landline-bottom {
+      top: 1920px;
+      left: 250px;
+      width: 180px;
+      height: 25px;
+    }
+
+    .call-mobile-bottom {
+      top: 1945px;
+      left: 250px;
+      width: 180px;
+      height: 25px;
+    }
+
+    .location-link-bottom {
+      top: 1915px;
+      left: 550px;
+      width: 270px;
+      height: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div id="lewis-spot"></div>
+
+    <img class="main-img" src="assets/poster.png" alt="Chen Eye Poster" />
+
+    <div class="click-zone" onclick="scrollToLewis()"></div>
+
+    <a href="tel:+914424454944" class="clickable call-landline-top"></a>
+    <a href="tel:+919841155611" class="clickable call-mobile-top"></a>
+    <a href="https://g.co/kgs/wWR9EiL" target="_blank" class="clickable location-link-top"></a>
+
+    <a href="tel:+914424454944" class="clickable call-landline-bottom"></a>
+    <a href="tel:+919841155611" class="clickable call-mobile-bottom"></a>
+    <a href="https://g.co/kgs/wWR9EiL" target="_blank" class="clickable location-link-bottom"></a>
+  </div>
+
+  <script>
+    function scrollToLewis() {
+      const target = document.getElementById('lewis-spot');
+      window.scrollTo({
+        top: target.offsetTop,
+        behavior: 'smooth'
+      });
+    }
+  </script>
+
+</body>
+</html>
