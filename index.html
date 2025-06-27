@@ -2,34 +2,67 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Chen Eye Opticians</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <style>
-    html, body {
+    * {
       margin: 0;
       padding: 0;
-      overflow-x: hidden; /* 👈 this is key */
-      background-color: #0d0c1d;
+      box-sizing: border-box;
     }
 
-    .wrapper {
+    html, body {
       width: 100%;
-      max-width: 100%;
-      overflow-x: hidden; /* 👈 this too */
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      background-color: #0b0a23;
     }
 
-    .wrapper img {
-      display: block;
-      width: 100vw; /* 👈 force match to viewport width */
-      max-width: 100vw;
+    .container {
+      position: relative;
+      width: 100vw;
+    }
+
+    .main-img {
+      width: 100vw;
       height: auto;
+      display: block;
+    }
+
+    .click-zone {
+      position: absolute;
+      top: 1045px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 210px;
+      height: 42px;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    #lewis-spot {
+      position: absolute;
+      top: 1385px;
     }
   </style>
 </head>
 <body>
-  <div class="wrapper">
-    <img src="assets/desktop-1.png" alt="Figma Design" />
+
+  <div class="container">
+    <div id="lewis-spot"></div>
+    <img class="main-img" src="assets/desktop-1.png" alt="Chen Eye Poster" />
+    <div class="click-zone" onclick="scrollToLewis()"></div>
   </div>
+
+  <script>
+    function scrollToLewis() {
+      const target = document.getElementById('lewis-spot');
+      window.scrollTo({
+        top: target.offsetTop,
+        behavior: 'smooth'
+      });
+    }
+  </script>
+
 </body>
 </html>
