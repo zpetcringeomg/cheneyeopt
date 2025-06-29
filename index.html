@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chen Eye Opticians</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      overflow-x: hidden;
+      background-color: #0f0f2c;
+    }
+    .image-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      overflow-x: hidden;
+    }
+    .main-image {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="image-container">
+    <img 
+      src="assets/Desktop - 1 (2).png" 
+      alt="Chen Eye Poster" 
+      usemap="#linkmap" 
+      class="main-image">
+  </div>
+
+  <map name="linkmap">
+    <!-- Area 1: Landline 044-24454944 -->
+    <area shape="rect" coords="3144,1274,4058,1409" href="tel:+914424454944" alt="Call Landline 1">
+
+    <!-- Area 2: Mobile +91-9841155611 -->
+    <area shape="rect" coords="3154,1449,4080,1581" href="tel:+919841155611" alt="Call Mobile">
+
+    <!-- Area 3: Google Maps Link -->
+    <area shape="rect" coords="4879,1046,6292,1554" href="https://g.co/kgs/Aaum1Ai" target="_blank" alt="Open Map 1">
+
+    <!-- Area 4: Landline 044-24454944 (Bottom) -->
+    <area shape="rect" coords="1885,29344,2846,29483" href="tel:+914424454944" alt="Call Landline 2">
+
+    <!-- Area 5: Mobile +91-9841155611 (Bottom) -->
+    <area shape="rect" coords="1889,29534,4080,29672" href="tel:+919841155611" alt="Call Mobile Bottom">
+
+    <!-- Area 6: Google Maps Link (Bottom) - updated coordinates -->
+    <area shape="rect" coords="3547,29045,5282,29647" href="https://g.co/kgs/Aaum1Ai" target="_blank" alt="Open Map 2">
+  </map>
+
+  <script src="assets/imageMapResizer.min.js"></script>
+  <script>
+    window.onload = function () {
+      if (typeof imageMapResize === 'function') {
+        imageMapResize();
+      }
+    };
+  </script>
+
+</body>
+</html>
